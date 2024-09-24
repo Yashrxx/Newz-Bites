@@ -1,35 +1,36 @@
 import React, { Component } from 'react'
 // import './App.css';
+import { Link } from 'react-router-dom'
 export class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-body-tertiary">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="/news">Navbar</a>
+                    <Link className="navbar-brand" to="/news">Navbar</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="/news">Home</a>
+                                <Link className="nav-link active" aria-current="page" to="/news">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/news">Link</a>
+                                <Link className="nav-link" to="/news">Link</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="/news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link dropdown-toggle" to="/news" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
-                                </a>
+                                </Link>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="/news">Action</a></li>
-                                    <li><a className="dropdown-item" href="/news">Another action</a></li>
+                                    <li><Link className="dropdown-item" to="/news">Action</Link></li>
+                                    <li><Link className="dropdown-item" to="/news">Another action</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="/news">Something else here</a></li>
+                                    <li><Link className="dropdown-item" to="/news">Something else here</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true" href='/'>Disabled</a>
+                                <Link className="nav-link disabled" aria-disabled="true" to='/'>Disabled</Link>
                             </li>
                         </ul>
                         <form style={{marginLeft:"850px"}} className="d-flex" role="search">
