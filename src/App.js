@@ -13,7 +13,7 @@ export default class App extends Component {
           <Router>
           <Navbar title="Quizer" aboutText="About Us" mode="black"/>
           <Routes>
-          <Route path="/news" exact element={<Newscss/>}/>
+          <Route path="/news/bite" exact element={<Newscss/>}/>
            </Routes>
           </Router>
     )
