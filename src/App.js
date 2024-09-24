@@ -1,20 +1,18 @@
 import './App.css';
 import {
   BrowserRouter as Router,
-  Routes,
-  Route,
+  // Routes,
+  // Route,
 } from "react-router-dom";
-import React, { Component ,Fragment} from 'react'
+import React, { Component } from 'react'
 import Navbar from './components/Navbar';
 import Newscss from './components/Newscss';
 export default class App extends Component {
   render() {
     return (
           <Router>
-          <Navbar title="Quizer" aboutText="About Us" mode="black"/>
-          <Routes>
-          <Route path="/news/bite" exact element={<Newscss/>}/>
-           </Routes>
+          <Navbar title="Arya" aboutText="About Us" mode="black"/>
+          <Newscss/>
           </Router>
     )
   }
