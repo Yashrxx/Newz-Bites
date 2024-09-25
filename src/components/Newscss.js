@@ -92,32 +92,32 @@ export default class Newscss extends Component {
   }
     
   handeleNextClick= async()=>{
-    // if(this.state.page+1>Math.ceil(this.state.totalResults/20)){
-    // }
-    // else{
-    // let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f16970474a5a466380c187326ed5f8c2&page=${this.state.page+1}&pageSize=20`;
-    // let data=await fetch(url)
-    // let pardesdData=await data.json()
-    // this.setState({
-    //   page:this.state.page+1,
-    //   articles:pardesdData.articles})
-    //   console.log(this.state.page)
+    if(this.state.page+1>Math.ceil(this.state.totalResults/20)){
     }
-  // }
+    else{
+    let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f16970474a5a466380c187326ed5f8c2&page=${this.state.page+1}&pageSize=20`;
+    let data=await fetch(url)
+    let pardesdData=await data.json()
+    this.setState({
+      page:this.state.page+1,
+      articles:pardesdData.articles})
+      console.log(this.state.page)
+    }
+  }
   handelePrevClick= async()=>{
-    // let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f16970474a5a466380c187326ed5f8c2&page=${this.state.page-1}&pageSize=20`;
-    // let data=await fetch(url)
-    // let pardesdData=await data.json()
-    // this.setState({
-    //   page:this.state.page-1,
-      // articles:pardesdData.articles})
+    let url=`https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f16970474a5a466380c187326ed5f8c2&page=${this.state.page-1}&pageSize=20`;
+    let data=await fetch(url)
+    let pardesdData=await data.json()
+    this.setState({
+      page:this.state.page-1,
+      articles:pardesdData.articles})
   }
   async componentDidMount(){
-    // let url="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f16970474a5a466380c187326ed5f8c2";
-    // let data=await fetch(url)
-    // let pardesdData=await data.json()
-    // this.setState({articles:pardesdData.articles,totalResults:pardesdData.totalResults})
-    this.setState({articles:this.articles,totalResults:this.totalResults})
+    let url="https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f16970474a5a466380c187326ed5f8c2";
+    let data=await fetch(url)
+    let pardesdData=await data.json()
+    this.setState({articles:pardesdData.articles,totalResults:pardesdData.totalResults})
+    // this.setState({articles:this.articles,totalResults:this.totalResults})
   }
   render() {
     return (
